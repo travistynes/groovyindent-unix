@@ -15,6 +15,9 @@ setlocal cindent cinoptions& cinoptions+=j1
 " The "extends" and "implements" lines start off with the wrong indent.
 setlocal indentkeys& indentkeys+=0=extends indentkeys+=0=implements
 
+" Don't dedent labels (seen in Spock tests)
+setlocal cinoptions+=L0
+
 " Set the function to do the work.
 setlocal indentexpr=GetGroovyIndent()
 
